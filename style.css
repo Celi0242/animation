@@ -1,0 +1,254 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#scene {
+    position: relative;
+    width: 100vw;
+    height: 56.25vw;
+    overflow: hidden;
+    background-image: url(SVG/baggrunddone1.svg);
+    z-index: 1;
+}
+
+#forgrund {
+    width: 103vw;
+    height: 56.25vw;
+    background-image: url(SVG/forgrund.png);
+    background-size: 100%;
+    position: absolute;
+    top: 4vw;
+    left: -3vw;
+    z-index: 2;
+}
+
+/* *** MAND CONTAINER *** */
+
+#mand_container {
+    position: absolute;
+    bottom: 12vw;
+
+
+
+}
+
+/* Flytte-animation: mand kommer ind */
+
+.move_in {
+    animation-name: move_in_kf;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes move_in_kf {
+    from {
+        left: -20vw;
+    }
+
+    to {
+        left: 30vw;
+    }
+}
+
+/* Placering: står inde */
+
+.position_in {
+    left: 40vw;
+}
+
+/* *** mand SPRITE *** */
+
+#mand_sprite {
+    background-image: url(Artboarddone.svg);
+    background-size: 800% 200%;
+    width: 20vw;
+    height: 28vw;
+    bottom: 40vw;
+    left: -20vw;
+
+}
+
+
+/* Sprite-animation: mand går */
+
+.walk {
+    animation-name: walk_kf;
+    animation-duration: 1s;
+    animation-timing-function: steps(8);
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+@keyframes walk_kf {
+    0% {
+        background-position: 0 0%;
+    }
+    100% {
+        background-position: 800% 0%;
+    }
+}
+
+/* Skattekiste blinker */
+
+#skat {
+    position: absolute;
+    width: 17vw;
+    height: 30.12vw;
+    background-image: url(SVG/skattekiste.svg);
+    background-size: 800% 100%;
+    left: 50vw;
+    top: 21.5vw;
+}
+
+.move {
+    animation-name: skat_move;
+    animation-duration: 1s;
+    animation-timing-function: steps(8);
+    animation-iteration-count: infinite;
+}
+
+@keyframes skat_move {
+    0% {
+        background-position: 0 0;
+
+    }
+    100% {
+        background-position: 800% 0%;
+
+
+    }
+
+}
+
+/* Abe laver abelyde/ tegn */
+
+#abe {
+    position: absolute;
+    width: 20vw;
+    height: 30.12vw;
+    background-image: url(SVG/abe%20spritenyny.svg);
+    background-size: 800% 100%;
+    left: 71vw;
+    top: 0vw;
+}
+
+.moving {
+    animation-name: abe_move;
+    animation-duration: 1s;
+    animation-timing-function: steps(8);
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes abe_move {
+    0% {
+        background-position: 0 0;
+
+    }
+    100% {
+        background-position: 800% 0%;
+
+
+    }
+
+}
+
+/* Mand dør*/
+
+.skelet {
+    animation-name: ikkeilive;
+    animation-duration: 7s;
+    animation-timing-function: steps(7);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+
+
+
+
+}
+
+@keyframes ikkeilive {
+    0% {
+        background-position: 0 -100%;
+    }
+    100% {
+        background-position: -700% -100%;
+    }
+
+}
+
+.lig {
+    animation-name: liget;
+    animation-duration: 7s;
+    animation-timing-function: steps(1);
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+    animation-direction: reverse;
+}
+
+@keyframes liget {
+    100% {
+        background-position: 0% -100%;
+    }
+
+}
+
+/*
+.skelet {
+    animation-name: ikkeilive;
+    animation-duration: 5s;
+    animation-timing-function: steps(8);
+    animation-iteration-count: infinite;
+}
+
+@keyframes ikkeilive {
+    100% {
+        background-position: 0 -200;
+
+    }
+
+
+}
+*/
+
+/* Bur falder ned */
+
+#bur {
+    width: 30vw;
+    height: 60vw;
+    background-image: url(SVG/bur.png);
+    background-size: 100%;
+    position: absolute;
+    top: -115vw;
+    bottom: 0;
+    left: 25vw;
+    z-index: 2;
+
+
+}
+
+.bur_falder {
+    animation-duration: 3s;
+    animation-name: buret;
+    animation-fill-mode: both;
+}
+
+@keyframes buret {
+    0% {
+        top: -80vw;
+    }
+    60% {
+        top: -70vw;
+    }
+    80% {
+        top: -60vw;
+    }
+
+    100% {
+        top: -15vw;
+    }
+
+}
